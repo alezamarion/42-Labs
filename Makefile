@@ -6,13 +6,13 @@
 #    By: azamario <azamario@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/01/11 02:52:20 by joeduard          #+#    #+#              #
-#    Updated: 2023/01/15 03:30:46 by azamario         ###   ########.fr        #
+#    Updated: 2023/01/15 04:14:17 by azamario         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME		=	labs
-#ENCODER 	=	encoder
-#DECODER	= 	decoder
+NAME		=
+ENCODER 	=	encoder
+DECODER		= 	decoder
 
 CC			=	gcc
 FLAGS		=	-Wall -Werror -Wextra -g -fsanitize=address 
@@ -35,7 +35,9 @@ SRC			=	$(addprefix $(SRC_DIR)/, $(FILES))
 
 OBJ			=	$(subst $(SRC_DIR)/, $(OBJ_DIR)/, $(SRC:.c=.o))
 
-all:	$(NAME)
+all:	$(ENCODER) $(DECODER)
+
+$(NAME)
 
 $(NAME):	$(OBJ)
 	@$(CC) $(FLAGS) $(OBJ) $(INC) -o $(NAME)

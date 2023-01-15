@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   labs.h                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: joeduard <joeduard@student.42sp.org.br>    +#+  +:+       +#+        */
+/*   By: azamario <azamario@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/11 02:54:14 by joeduard          #+#    #+#             */
-/*   Updated: 2023/01/14 20:59:25 by joeduard         ###   ########.fr       */
+/*   Updated: 2023/01/15 03:58:34 by azamario         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,5 +60,6 @@ int     get_file_size();
 void    free_table(char **table);
 void    free_tree(t_node *root);
 void	read_text(unsigned char *text);
+void	init_data(t_huff *data);
 
 #endif

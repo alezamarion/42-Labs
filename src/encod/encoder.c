@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   encoder.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: joeduard <joeduard@student.42sp.org.br>    +#+  +:+       +#+        */
+/*   By: azamario <azamario@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/14 20:46:01 by joeduard          #+#    #+#             */
-/*   Updated: 2023/01/14 21:37:33 by joeduard         ###   ########.fr       */
+/*   Updated: 2023/01/15 03:53:14 by azamario         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/labs.h"
+#include "../../includes/labs.h"
 
 int	main(void)
 {
