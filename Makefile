@@ -3,55 +3,48 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: joeduard <joeduard@student.42sp.org.br>    +#+  +:+       +#+         #
+#    By: azamario <azamario@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/01/11 02:52:20 by joeduard          #+#    #+#              #
-#    Updated: 2023/01/14 22:29:18 by joeduard         ###   ########.fr        #
+#    Updated: 2023/01/15 03:30:46 by azamario         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME		=
-ENCODER 	=	encoder
-DECODER		= 	decoder
+NAME		=	labs
+#ENCODER 	=	encoder
+#DECODER	= 	decoder
 
 CC			=	gcc
-
 FLAGS		=	-Wall -Werror -Wextra -g -fsanitize=address 
 
 INC			=	-I ./includes
 
-decoder		=	decoder.c decompress.c
-encoder		=	compress.c dictionary.c encoder.c frequency_table.c huffman_tree.c sorted_list.c
-utils		=	test.c utils.c
+SRC_DIR		=	./src
+OBJ_DIR		=	./obj
+
+DECOD		=	decoder.c decompress.c
+ENCOD		=	compress.c dictionary.c encoder.c frequency_table.c huffman_tree.c sorted_list.c
+UTILS		=	test.c utils.c
 
 
-FILES		=	$(addprefix decoder/, $(decoder)) \
-				$(addprefix encoder/, $(encoder)) \
-				$(addprefix utils/, $(utils))
+FILES		=	$(addprefix decod/, $(DECOD)) \
+				$(addprefix encod/, $(ENCOD)) \
+				$(addprefix utils/, $(UTILS))
 
+SRC			=	$(addprefix $(SRC_DIR)/, $(FILES))
 
-SRC			=	$(FILES)
-OBJ			=	$(addprefix $(OBJ_DIR)/, $(FILES:.c=%.o))
+OBJ			=	$(subst $(SRC_DIR)/, $(OBJ_DIR)/, $(SRC:.c=.o))
 
-all:		$(ENCODER) $(DECODER)
-
-$(NAME): all
+all:	$(NAME)
 
 $(NAME):	$(OBJ)
 	@$(CC) $(FLAGS) $(OBJ) $(INC) -o $(NAME)
 
 $(OBJ_DIR)/%.o: $(SRC_DIR)/%.c
-	@mkdir -p obj/decoder
-	@mkdir -p obj/encoder
+	@mkdir -p obj/decod
+	@mkdir -p obj/encod
 	@mkdir -p obj/utils
 	$(CC) $(FLAGS) $(INC) -c $< -o $@
-
-
-run: encoder
-	./$(ENCODER)
-
-run: decoder
-	./$(DECODER)
 
 clean:
 	@rm -rf obj
