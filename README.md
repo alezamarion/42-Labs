@@ -21,7 +21,7 @@ Este algoritmo faz uso das seguintes estruturas:
 <img src="algo_huffman.jpg"> <br><br>
 
 ## Clonar o projeto
-git clone https://github.com/42sp/42labs-selection-process-v4-alezamarion
+git clone https://github.com/alezamarion/42-Labs
 
 ## Compilacão
 make
