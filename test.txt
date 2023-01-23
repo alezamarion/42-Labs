@@ -1,0 +1,11 @@
+
+Um algoritmo é uma sequência de instruções ou comandos realizados de maneira sistemática com o objetivo de resolver um problema ou executar uma tarefa.
+
+A palavra "algoritmo" faz referência ao matemático árabe Al Khwarizmi, que viveu no século IX, e descreveu regras para equações matemáticas.
+
+Os algoritmos são como uma receita de bolo: uma sequência de ações que devem ser executadas para que o objetivo final — o bolo pronto — seja atingido.
+
+Aplicam-se os algoritmos nas tarefas simples do dia a dia e também nos programas computacionais complexos que identificam o comportamento do consumidor na internet.
+
+Todas as funções dos computadores, smartphones e tablets, por exemplo, resultam de algoritmos. Essas máquinas conseguem realizar bilhões de comandos em poucos segundos.
+
